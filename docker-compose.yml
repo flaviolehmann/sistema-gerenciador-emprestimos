@@ -1,0 +1,10 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:13-alpine'
+    container_name: banco_sge
+    environment:
+      - POSTGRES_PASSWORD=goku_agiota_123
+    restart: always
+    ports:
+      - '5432:5432'
