@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banco_sge
+    username: postgres
+    password: goku_agiota_123
+
+  jpa:
+    hibernate:
+#      dialect: org.hibernate.dialect.PostgreSQLDialect
+      dll-auto: update
+
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+    drop-first: true
