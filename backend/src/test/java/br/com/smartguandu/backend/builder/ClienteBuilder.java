@@ -2,6 +2,7 @@ package br.com.smartguandu.backend.builder;
 
 import br.com.smartguandu.backend.dominio.Cliente;
 import br.com.smartguandu.backend.servico.ClienteServico;
+import br.com.smartguandu.backend.servico.dto.ClienteExibirDTO;
 import br.com.smartguandu.backend.servico.mapper.ClienteCadastrarMapper;
 import lombok.RequiredArgsConstructor;
 
@@ -43,8 +44,8 @@ public class ClienteBuilder {
         return buildMany(qtde, new ArrayList<>());
     }
 
-    public void persistir(Cliente cliente) {
-        clienteServico.save(clienteCadastrarMapper.toDto(cliente));
+    public ClienteExibirDTO persistir(Cliente cliente) {
+        return clienteServico.save(clienteCadastrarMapper.toDto(cliente));
     }
 
     public void persistirMuitos(List<Cliente> clientes) {

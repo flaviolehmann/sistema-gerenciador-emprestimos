@@ -2,6 +2,7 @@ package br.com.smartguandu.backend.builder;
 
 import br.com.smartguandu.backend.dominio.Agiota;
 import br.com.smartguandu.backend.servico.AgiotaServico;
+import br.com.smartguandu.backend.servico.dto.AgiotaExibirDTO;
 import br.com.smartguandu.backend.servico.mapper.AgiotaCadastrarMapper;
 import lombok.RequiredArgsConstructor;
 
@@ -38,8 +39,8 @@ public class AgiotaBuilder {
         return buildMany(qtde, new ArrayList<>());
     }
 
-    public void persistir(Agiota agiota) {
-        agiotaServico.save(agiotaCadastrarMapper.toDto(agiota));
+    public AgiotaExibirDTO persistir(Agiota agiota) {
+        return agiotaServico.save(agiotaCadastrarMapper.toDto(agiota));
     }
 
     public void persistirMuitos(List<Agiota> agiotas) {
