@@ -55,7 +55,6 @@ public class EmprestimoServicoImpl implements EmprestimoServico {
             return emprestimoExibirMapper.toDto(optionalEmprestimo.get());
         }
         throw new NotFoundException("Empréstimo não encontrado no sistema.");
-
     }
 
     @Override

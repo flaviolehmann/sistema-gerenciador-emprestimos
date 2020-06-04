@@ -28,7 +28,7 @@ public class EmprestimoBuilder {
     public Emprestimo build() {
         Emprestimo emprestimo = new Emprestimo();
 
-        emprestimo.setValor(1200L);
+        emprestimo.setValor(800L);
         emprestimo.setDataFinalPrevista(LocalDate.now().plusYears(1));
 
         Cliente cliente = clienteBuilder.build();
